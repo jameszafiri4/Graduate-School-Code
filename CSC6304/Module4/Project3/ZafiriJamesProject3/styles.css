@@ -1,0 +1,38 @@
+body {
+    background-color: #a6f5f3;
+}
+
+h1 {
+    color: #7d0b0b;
+    text-align: center;
+}
+
+h3 {
+    color: #1b1a1a;
+    text-align: center;
+}
+
+
+p {
+    color: #2e1fbe;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #071e08;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.luffy-image {
+    width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

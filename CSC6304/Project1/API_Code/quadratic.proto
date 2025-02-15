@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package quadratic;
+
+message Coefficients {
+    double a = 1;
+    double b = 2;
+    double c = 3;
+}
+
+message Solution {
+    string result = 1;
+}
+
+service QuadraticSolver {
+    rpc Solve(Coefficients) returns (Solution);
+}

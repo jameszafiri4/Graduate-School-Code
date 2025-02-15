@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        One Piece
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="main-header">One Piece Facts</h1>
+    <h3 class="sub-header">Learn about the best anime and manga!</h3>
+    <div class="content">
+        <p class="anime-fact">The main character is Monkey D. Luffy.</p>
+        <p class="anime-fact">He ate the Gum-Gum Fruit so now his body has the properties of rubber.</p>
+    </div>
+    <img src="luffy.jpeg" alt="Luffy Image" class="luffy-image">
+    <button id="changeHeaderBtn">Change Main Header</button>
+    <button id="changeFactBtn">Change Anime Fact</button>
+
+    <script>
+        document.getElementById('changeHeaderBtn').addEventListener('click', function() {
+            var header = document.querySelector('.main-header');
+            header.textContent = "Discover the One Piece!";
+        });
+
+        document.getElementById('changeFactBtn').addEventListener('click', function() {
+            var facts = document.querySelectorAll('.anime-fact');
+            facts.forEach(function(fact) {
+                fact.textContent = "Luffy is going to be the king of the pirates!";
+            });
+        });
+    </script>
+</body>
+</html>
