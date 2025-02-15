@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module Project04</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">Project04</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/jameszafiri/Documents/CSC6003A%20-%20Foundations%20of%20Programming/Projects/Project%2004/Project04.py">/Users/jameszafiri/Documents/CSC6003A - Foundations of Programming/Projects/Project 04/Project04.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;this&nbsp;program&nbsp;uses&nbsp;a&nbsp;rectangle&nbsp;class&nbsp;as&nbsp;well&nbsp;as&nbsp;a&nbsp;child&nbsp;parallelepiped&nbsp;class&nbsp;and&nbsp;obtains&nbsp;length,&nbsp;width,&nbsp;and&nbsp;height&nbsp;inputs&nbsp;from&nbsp;the&nbsp;user<br>
+#&nbsp;the&nbsp;program&nbsp;then&nbsp;displays&nbsp;the&nbsp;perimeter&nbsp;and&nbsp;area&nbsp;of&nbsp;a&nbsp;rectangle,&nbsp;as&nbsp;well&nbsp;as&nbsp;the&nbsp;volume&nbsp;of&nbsp;a&nbsp;parallelepiped&nbsp;using&nbsp;the&nbsp;classes</span></p>
+<p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="Project04.html#Rectangle">Rectangle</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="Project04.html#Parallelepiped">Parallelepiped</a>
+</dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Parallelepiped">class <strong>Parallelepiped</strong></a>(<a href="Project04.html#Rectangle">Rectangle</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Parallelepiped">Parallelepiped</a>(l,&nbsp;w,&nbsp;h)<br>
+&nbsp;<br>
+#&nbsp;this&nbsp;is&nbsp;a&nbsp;child&nbsp;class&nbsp;that&nbsp;inherits&nbsp;the&nbsp;parent&nbsp;class&nbsp;<a href="#Rectangle">Rectangle</a><br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="Project04.html#Parallelepiped">Parallelepiped</a></dd>
+<dd><a href="Project04.html#Rectangle">Rectangle</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Parallelepiped-Volume"><strong>Volume</strong></a>(self)</dt><dd><span class="code">#&nbsp;creates&nbsp;a&nbsp;method&nbsp;to&nbsp;calculate&nbsp;the&nbsp;volume</span></dd></dl>
+
+<dl><dt><a name="Parallelepiped-__init__"><strong>__init__</strong></a>(self, l, w, h)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Methods inherited from <a href="Project04.html#Rectangle">Rectangle</a>:<br>
+<dl><dt><a name="Parallelepiped-Area"><strong>Area</strong></a>(self)</dt><dd><span class="code">#&nbsp;creates&nbsp;a&nbsp;method&nbsp;to&nbsp;calculate&nbsp;the&nbsp;area</span></dd></dl>
+
+<dl><dt><a name="Parallelepiped-Perimeter"><strong>Perimeter</strong></a>(self)</dt><dd><span class="code">#&nbsp;creates&nbsp;a&nbsp;method&nbsp;to&nbsp;calculate&nbsp;the&nbsp;perimeter</span></dd></dl>
+
+<dl><dt><a name="Parallelepiped-display"><strong>display</strong></a>(self)</dt><dd><span class="code">#&nbsp;creates&nbsp;a&nbsp;method&nbsp;to&nbsp;display&nbsp;the&nbsp;values&nbsp;using&nbsp;an&nbsp;instantiation&nbsp;of&nbsp;the&nbsp;rectangle&nbsp;class</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="Project04.html#Rectangle">Rectangle</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Rectangle">class <strong>Rectangle</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Rectangle">Rectangle</a>(l,&nbsp;w)<br>
+&nbsp;<br>
+#&nbsp;this&nbsp;is&nbsp;a&nbsp;class&nbsp;representing&nbsp;a&nbsp;rectangle<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Rectangle-Area"><strong>Area</strong></a>(self)</dt><dd><span class="code">#&nbsp;creates&nbsp;a&nbsp;method&nbsp;to&nbsp;calculate&nbsp;the&nbsp;area</span></dd></dl>
+
+<dl><dt><a name="Rectangle-Perimeter"><strong>Perimeter</strong></a>(self)</dt><dd><span class="code">#&nbsp;creates&nbsp;a&nbsp;method&nbsp;to&nbsp;calculate&nbsp;the&nbsp;perimeter</span></dd></dl>
+
+<dl><dt><a name="Rectangle-__init__"><strong>__init__</strong></a>(self, l, w)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Rectangle-display"><strong>display</strong></a>(self)</dt><dd><span class="code">#&nbsp;creates&nbsp;a&nbsp;method&nbsp;to&nbsp;display&nbsp;the&nbsp;values&nbsp;using&nbsp;an&nbsp;instantiation&nbsp;of&nbsp;the&nbsp;rectangle&nbsp;class</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-main"><strong>main</strong></a>()</dt><dd><span class="code">#&nbsp;main&nbsp;function&nbsp;to&nbsp;ask&nbsp;for&nbsp;inputs&nbsp;and&nbsp;display&nbsp;values</span></dd></dl>
+</td></tr></table>
+</body></html>
