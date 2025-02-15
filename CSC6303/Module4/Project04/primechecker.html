@@ -1,0 +1,63 @@
+<!--
+Simple webpage that tells the user if a number they entered
+is prime or not. It uses the isPrime function that we have based
+off its C++ version from Module 2. This code is written in
+HTML/JavaScript and was tested on Visual Studio Code.
+James Zafiri
+version 1.0.0
+Week 4 of CSC6303
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prime Checker</title>
+  <script>
+    function isPrime() {
+        // obtaining number entered by user
+        var num = document.getElementById("nbr").value;
+        // making sure number entered is an integer
+        num = parseInt(num);
+
+        //checking to see if input is a valid number and between 2 and 9999
+        if (isNaN(num) || num < 2 || num > 9999) {
+            document.getElementById("outputAnswer").innerHTML = "Please enter a valid number that's between 2 and 9999.";
+            return;
+        }
+
+        // checking to see if number is prime using logic based off of C++ function
+        var prime = true;
+        if (num <= 1) {
+            prime = false;
+        } else if (num <= 3) {
+            prime = true;
+        } else if (num % 2 === 0 || num % 3 === 0) {
+            prime = false;
+        } else {
+            for (var i = 5; i * i <= num; i += 6) {
+                if (num % i === 0 || num % (i + 2) === 0) {
+                    prime = false;
+                    break;
+                }
+            }
+        }
+
+        // now to display the results to the user
+        if (prime) {
+            document.getElementById("outputAnswer").innerHTML = "This number is prime!";
+            document.getElementById("outputAnswer").style.color = "red";
+        } else {
+            document.getElementById("outputAnswer").innerHTML = "This number is not prime!";
+            document.getElementById("outputAnswer").style.color = "blue";
+        }
+    }
+</script>
+</head>
+<body>
+    <h1 style="color:red">Prime Checker</h1>
+        <label>Enter a number from 2 to 9999:</label>
+        <input type="number" id="nbr"> <br> <br>
+        <button onclick="isPrime()">Submit</button>
+    <p id="outputAnswer">I'm waiting...</p>
+</body>
+</html>

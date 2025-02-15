@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button and Style></title>
+        <style>
+            h2 {color:blueviolet}
+            body {background-color: beige; color:grey}
+        </style>
+    </head>
+    <body>
+        <h2>Click to change</h2>
+        <p>Style changes can be done using a change in attributes</p>
+        <p>In this case it changes the style of the level 3 header.</p>
+        <h3 id="change_style"; style="color:blue">This Text Changes Color by Attribute</h3>
+        <button onclick="document.getElementById('change_style').style.color='green'">Green</button>
+        <button onclick="document.getElementById('change_style').style.color='red'">Red</button>
+        <button onclick="document.getElementById('change_style').style.color='blue'">Blue</button>
+        <p>Other properties, and also color, can be changed using a JavaScript function.</p>
+        <h3 id="change_js"; style="color:darkorchid">This Text Changes Color by JavaScript</h3>
+        <script>
+            function changeColor(color) {
+                if (color == 1)      { document.getElementById("change_js").style.color = 'black'; }
+                else if (color == 2) { document.getElementById("change_js").style.color = 'orange'; }
+                else                 { document.getElementById("change_js").style.color = 'Orchid'; } }
+        </script>
+        <button onclick="changeColor(1)">Black</button>
+        <button onclick="changeColor(2)">Pink</button>
+        <button onclick="changeColor(3)">Orange</button>
+    </body>
+</html>
+

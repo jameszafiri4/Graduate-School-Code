@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input and Output Example</title>
+  <script>
+    function displayPrompt() {
+        var name = document.getElementById("inputName").value;
+        var age  = document.getElementById("inputAge").value;
+        if (name != "") {
+            document.getElementById("outputName").innerHTML = "Hello, " + name;
+            document.getElementById("outputName").style.color = "red";
+            if (age < 30) { document.getElementById("outputAge").innerHTML = "You are very young!"; }
+            else          { document.getElementById("outputAge").innerHTML = "You are not too old to learn!"; }
+            document.getElementById("outputAge").style.color = "blue"; }
+        else { document.getElementById("outputName").innerHTML = "... still waiting ..."; }
+    }
+</script>
+</head>
+<body>
+    <h1 style="color:red">Getting to know you</h1>
+        <label>Enter Your Name:</label>
+        <input type="text" id="inputName"> <br>
+        <label>Enter Your Age:</label>
+        <input type="number" id="inputAge"> <br> <br>
+        <button onclick="displayPrompt()">Submit</button>
+    <p id="outputName">I'm waiting...</p>
+    <p id="outputAge"></p>
+</body>
+</html>
+
