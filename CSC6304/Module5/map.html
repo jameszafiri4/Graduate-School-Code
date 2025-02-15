@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Map Example</title>
+        <script>
+            function myCustomAction() {  alert("Leave my ear out of it!"); }
+        </script>
+    </head>
+    <body>
+        <h1>HTML Map example over an image</h1>
+        <img src="top_image.png" usemap="#myMap" alt="Clickable Image">
+        <map name="myMap">
+            <area shape="rect" coords="0,0,300,80"
+                href="http://www.merrimack.edu" target="_blank" alt="Merrimack College logo"
+                onclick="document.getElementById('message').textContent='Click on the item to see more information.'">
+            <area shape="rect" coords="150,180,600,210"
+                onclick="document.getElementById('message').textContent='The Masters of Science in CS teaches you how to design, analyze and implement algorithms.'">
+            <area shape="rect" coords="220,220,510,250"
+                href="https://online.merrimack.edu/masters-computer-science/software-engineering-curriculum/" target="_blank" alt="MSCS Curriculum"
+                onclick="document.getElementById('message').textContent='Click on the item to see more information.'">
+            <area shape="rect" coords="630,180,650,210"
+                onclick="myCustomAction()">
+        </map>
+        <p id="message">Click on the item to see more information.</p>
+    </body>
+</html>

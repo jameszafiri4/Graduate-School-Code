@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #4283c5;
+    }
+    .calculator {
+      width: 320px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #da8d8d;
+    }
+    input[type="text"] {
+      width: 100%;
+      height: 60px;
+      text-align: right;
+      margin-bottom: 20px;
+      font-size: 24px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+    }
+    .btns-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+    }
+    .btns-container button {
+      width: 100%;
+      height: 60px;
+      font-size: 20px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: #e0e0e0;
+      color: #333;
+    }
+    .btns-container button:hover {
+      background-color: #ccc;
+    }
+    .btns-container button:active {
+      background-color: #bfbfbf;
+    }
+  </style>
+  <script type="text/javascript">
+    function clearInput() {
+      document.getElementById("result").value = "";
+    }
+    function appendInput(value) {
+      document.getElementById("result").value += value;
+    }
+    function calculate() {
+      var input = document.getElementById("result").value;
+      try {
+        var result = eval(input);
+        document.getElementById("result").value = result;
+      } catch (error) {
+        document.getElementById("result").value = "Error";
+      }
+    }
+    function squareRoot() {
+      var input = document.getElementById("result").value;
+      try {
+        var result = Math.sqrt(eval(input));
+        document.getElementById("result").value = result;
+      } catch (error) {
+        document.getElementById("result").value = "Error";
+      }
+    }
+    function calculatePercentage() {
+      var input = document.getElementById("result").value;
+      try {
+        var result = eval(input) / 100;
+        document.getElementById("result").value = result;
+      } catch (error) {
+        document.getElementById("result").value = "Error";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="result" readonly>
+    <div class="btns-container">
+      <button onclick="clearInput()">C</button>
+      <button onclick="squareRoot()">√</button>
+      <button onclick="calculatePercentage()">%</button>
+      <button onclick="appendInput('/')">÷</button>
+      <button onclick="appendInput('7')">7</button>
+      <button onclick="appendInput('8')">8</button>
+      <button onclick="appendInput('9')">9</button>
+      <button onclick="appendInput('*')">x</button>
+      <button onclick="appendInput('4')">4</button>
+      <button onclick="appendInput('5')">5</button>
+      <button onclick="appendInput('6')">6</button>
+      <button onclick="appendInput('-')">-</button>
+      <button onclick="appendInput('1')">1</button>
+      <button onclick="appendInput('2')">2</button>
+      <button onclick="appendInput('3')">3</button>
+      <button onclick="appendInput('+')">+</button>
+      <button onclick="appendInput('0')">0</button>
+      <button onclick="appendInput('.')">.</button>
+      <button onclick="calculate()">=</button>
+    </div>
+  </div>
+</body>
+</html>

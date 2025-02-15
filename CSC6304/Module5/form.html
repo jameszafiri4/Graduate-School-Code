@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: grey
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 2px ridge red;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: beige
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="phone"],
+        input[type="number"],
+        input[type="range"],
+        select,
+        input[type="checkbox"] {
+            width: 97%;
+            padding: 5px;
+            margin-bottom: 10px;
+            background-color: rgb(208, 208, 176)
+        }
+
+        select[multiple] {
+            height: 100px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button[type="submit"],
+        button[type="reset"] {
+            border: 0;
+            line-height: 2.5;
+            padding: 0 20px;
+            font-size: 1rem;
+            text-align: center;
+            color: #aaaaaa;
+            text-shadow: 1px 1px 1px #000;
+            border-radius: 10px;
+            background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+            box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        button[type="submit"]:hover,
+        button[type="reset"]:hover {
+            color: #ffffff;
+        }
+        
+        button[type="submit"] {
+            background-color: #0c8614;
+            float: left
+        }
+
+        button[type="reset"] {
+            background-color: #f44336;
+            float: right
+        }
+    </style>
+</head>
+<body>
+    <h1>MSCS Student Form</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <fieldset>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="phone">Phone:</label>
+            <input type="phone" id="phone" name="phone" required>
+            <br>
+            <label for="contact">Preferred Contact Method:</label>
+            <input type="radio" id="contact_email" name="contact_method" value="email" checked>
+            <label for="contact_email">Email</label>
+            <input type="radio" id="contact_phone" name="contact_method" value="phone">
+            <label for="contact_phone">Phone</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="year">Stating Year:</label>
+            <input type="number" id="year" name="year" value="2022">
+            <br>
+            <label for="term">Stating Term:</label>
+            <input type="range" id="term" name="term" min="1" max="6" step="1" value="5">
+            <span style="font-size: 14px;">Spring 1 - Spring 2 - Summer 1 - Summer 2 - Fall 1 - Fall 2</span>
+            <br><br>
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="">--Select--</option>
+                <option value="active">Active</option>
+                <option value="returning">Returning</option>
+                <option value="other">Other</option>
+            </select>
+            <br>
+            <label for="nondegree">Check if non degree seeking:</label>
+            <input type="checkbox" id="nondegree" name="nondegree">
+        </fieldset>
+        <br>
+        <label for="course">Courses (multi select with control or command keys):</label>
+        <select id="course" name="course" multiple>
+            <option value="CSC6301">CSC6301</option>
+            <option value="CSC6302">CSC6302</option>
+            <option value="CSC6303">CSC6303</option>
+            <option value="CSC6304">CSC6304</option>
+            <option value="other">other(s)</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

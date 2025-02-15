@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stylish Buttons></title>
+        <style>
+            body {background-color: grey}
+            .styled {
+                border: 0;
+                line-height: 2.5;
+                padding: 0 20px;
+                font-size: 1rem;
+                text-align: center;
+                color: #aaaaaa;
+                text-shadow: 1px 1px 1px #000;
+                border-radius: 10px;
+                background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+                box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+            }
+            .styled:hover {
+                color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="change_style"; style="color: lightgrey">Click and change color</h2>
+        <button class="styled"; type="button"; style="background-color: red";
+            onclick="document.getElementById('change_style').style.color='crimson'">Red
+        </button>
+        <button class="styled"; type="button"; style="background-color: darkgreen";
+            onclick="document.getElementById('change_style').style.color='darkgreen'">Green
+        </button>
+        <button class="styled"; type="button"; style="background-color: darkblue";
+            onclick="document.getElementById('change_style').style.color='darkblue'">Blue
+        </button>
+        <br><br>
+        <button class="styled" type="button" style="background-color: grey; width: 14.5em";
+            onclick="document.getElementById('change_style').style.color='lightgrey'">Reset
+        </button>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                position: relative;
+                width: 1024px; /* Set the width of the container */
+                height: 512px; /* Set the height of the container */
+            }
+            .image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            #barv {
+                position: absolute;
+                top: 0px; /* Set the top position of the vertical bar */
+                left: 512px; /* Set the left position of the vertical bar */
+                width: 2px; /* Set the width of the vertical bar */
+                height: 512px; /* Set the height of the vertical bar */
+                background-color: yellow; /* Set the background color of the vertical bar */
+                opacity: 0.5; /* Set the opacity of the vertical bar */
+            }
+            #barh {
+                position: absolute;
+                top: 256px; /* Set the top position of the horizontal bar */
+                left: 0; /* Set the left position of the horizontal bar */
+                width: 1024px; /* Set the width of the horizontal bar */
+                height: 2px; /* Set the height of the horizontal bar */
+                background-color: red; /* Set the background color of the horizontal bar */
+                opacity: 0.5; /* Set the opacity of the horizontal bar */
+            }
+        </style>
+        <script>
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                        function (position) { success(position); },
+                        function (e) { unsuccess() },
+                        { enableHighAccuracy: true });
+                } else { 
+                    var t = document.getElementById("coord");
+                    t.innerHTML = "&nbsp Geolocation is not supported by this browser.";
+                }
+            }
+            function success(position) {
+                var lat = position.coords.latitude;
+                var lng = position.coords.longitude;
+                var t = document.getElementById("coord");
+                t.innerHTML = "&nbsp Latitude: " + Math.round(lat * 100)/100 +
+                              " - Longitude: " + Math.round(lng * 100)/100;
+                var x = document.getElementById("barv");
+                longitude = Math.round(lng+180)*512/180
+                x.style.left = longitude+"px"
+                x.style.opacity = 0.8
+                var y = document.getElementById("barh");
+                latitude = Math.round(90-lat)*256/90
+                y.style.top = latitude+"px"
+                y.style.opacity = 0.8
+            }
+            function unsuccess() {
+                var t = document.getElementById("coord");
+                t.innerHTML = "&nbsp Geolocation was not allowed by the user. "+
+                              "This may be a one-time refusal or you need to "+
+                              "check the Location Services on your Settings.";
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Click on the button to show your coordinates.</h3>
+        <p><button onclick="getLocation()">Get your location</button> <spam id="coord"></spam></p>
+        <div class="container">
+            <img class="image" src="https://svs.gsfc.nasa.gov/vis/a000000/a003600/a003615/earth_noClouds.0330.jpg" alt="World Image">
+            <div id="barv"></div>
+            <div id="barh"></div>
+        </div>
+    </body>
+</html>

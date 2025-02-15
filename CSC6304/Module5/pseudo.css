@@ -1,0 +1,29 @@
+body {
+    background-color:#e0d8bf;
+ }
+ 
+h1:hover {    /* mouse over */
+    color: red;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+strong:hover {
+    font-size: xx-large;
+}
+
+a.sec:link {    /* unvisited link */
+    color:darkred;
+}
+
+a.sec:visited {    /* visited link */
+    color: darkgreen;
+    font-style: italic;
+}
+
+p::selection {     /* selected element */
+    background-color: yellow;
+    color: darkorchid;
+}
+
+
