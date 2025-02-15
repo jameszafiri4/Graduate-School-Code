@@ -1,0 +1,20 @@
+def string_manipulation():
+    s = "my string to test"
+    print("Original: ", s)
+    print("Capitalize: ", s.capitalize())
+    print("Title: ", s.title())
+    print("Lower: ", s.lower())
+    print("Replace: ", s.replace("string","the characters"))
+    print("Number of \"t\": ", s.count("t"))
+    print("Number of \"st s\": ", s.count("st"))
+    print("From here  --> ", s.center(40)," <-- to here")
+    print("From here  --> ", s.ljust(40)," <-- to here")
+    print("From here  --> ", s.rjust(40)," <-- to here")
+    s2 = s.center(50)
+    print("From here  --> ", s2," <-- to here")
+    print("From here  --> ", s2.lstrip()," <-- to here")
+    print("From here  --> ", s2.rstrip()," <-- to here")
+    s = s2.rstrip()
+    print("Original: ", s, " <--")
+
+string_manipulation()
